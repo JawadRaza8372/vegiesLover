@@ -1,0 +1,28 @@
+@import "../../Colors.scss";
+.infoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  .iconDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $primary;
+    color: $primary;
+    width: 33px;
+    height: 33px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    margin-right: 1rem;
+    font-size: 20px !important;
+  }
+  h5 {
+    margin-bottom: 0.25rem;
+  }
+  h6 {
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: $ternary;
+  }
+}

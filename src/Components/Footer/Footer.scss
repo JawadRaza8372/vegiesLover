@@ -1,0 +1,100 @@
+@import "../../Colors.scss";
+.footerSection {
+  background-color: $footer;
+  padding: 4rem 0;
+  overflow-x: hidden;
+
+  .customContain {
+    color: $pure;
+    .footerGrid {
+      @include gridSystem(4);
+      .box {
+        margin-right: 2rem;
+        text-align: center;
+        &:nth-child(2) {
+          ul {
+            li {
+              div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 30%;
+                flex-direction: row;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+        h3 {
+          padding-bottom: 1rem;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid $primary;
+        }
+        p {
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+        button {
+          @include simpleButton;
+          @include hoverEffect($secondry);
+        }
+        ul {
+          list-style-type: none;
+          li {
+            margin-bottom: 1rem;
+            a {
+              color: $pure;
+              text-decoration: none;
+              transition: all 0.3s ease-in-out;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &:hover {
+                color: $primary;
+              }
+              .linkIcon {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.insApi {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .postwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div {
+      width: calc(1 / 3 * 100% - (1 - 1 / 3) * 10px);
+      margin-bottom: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .footerSection {
+    .customContain {
+      .footerGrid {
+        @include gridSystem(2);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 538px) {
+  .footerSection {
+    .customContain {
+      .footerGrid {
+        @include gridSystem(1);
+      }
+    }
+  }
+}

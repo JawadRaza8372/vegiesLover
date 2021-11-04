@@ -1,0 +1,62 @@
+@import "../../Colors.scss";
+.topProducts {
+  padding: 4rem 0;
+  background: $light;
+  overflow-x: hidden;
+
+  .customContain {
+    .pheading {
+      @include sectionHeading;
+    }
+    .centerdiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .viewButton {
+        @include simpleButton;
+        @include hoverEffect($ternary);
+      }
+    }
+  }
+}
+
+.slick-list {
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customArrow {
+  background-color: $primary;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin: auto 0;
+  border: none;
+  outline: none;
+}
+.customArrowDisabl {
+  background-color: lightgray;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin: auto 0;
+  border: none;
+  outline: none;
+}
+
+.customslid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gold;
+  padding: 0 50px;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.arrcolor {
+  color: $heaven;
+}

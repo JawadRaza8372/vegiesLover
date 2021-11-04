@@ -1,0 +1,123 @@
+@import "../../Colors.scss";
+.navbar {
+  padding: 10px 0px;
+  @include spaceBtwFlex;
+  @include magicShadow;
+}
+.navlink {
+  border: none;
+  position: relative;
+  padding: 10px 10px;
+  letter-spacing: 2px;
+  color: grey;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 0px;
+    height: 4px;
+    transition: all 0.4s ease-in-out;
+    background-color: $primary;
+  }
+  &:hover {
+    color: $primary;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+.activeNavLink {
+  border: none;
+  position: relative;
+  padding: 10px 10px;
+  color: $primary;
+  font-weight: bold;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    transition: all 0.4s ease-in-out;
+    background-color: $primary;
+  }
+}
+
+.cLink {
+  font-size: 30px !important;
+  font-weight: bold;
+  color: $primary !important;
+  text-decoration: none !important;
+}
+
+.minirow {
+  @include centerFlex;
+}
+.alignrow {
+  @include centerFlex;
+  flex-direction: row;
+}
+.extendbutton {
+  display: none;
+}
+.navShow {
+  display: none;
+}
+@media only screen and (max-width: 927px) {
+  .minirow {
+    display: none;
+  }
+  .extendbutton {
+    background-color: $primary;
+    color: white;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    @include centerFlex;
+    outline-width: 0;
+    border: 1px solid $primary;
+  }
+  .navShow {
+    width: 100%;
+    height: 90vh;
+    @include centerFlex;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 1;
+    background-color: $pure;
+  }
+}
+.logoutButton {
+  color: $ternary;
+  outline-width: 0;
+  border: 1px solid $ternary;
+  border-radius: 5px;
+  padding: 10px 20px;
+  @include centerFlex;
+  background-color: transparent;
+  &:hover {
+    background-color: red !important;
+    border: 1px solid red !important;
+  }
+}
+.userName {
+  font-weight: bold;
+  font-size: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}

@@ -1,0 +1,81 @@
+@import "../../Colors.scss";
+.shadows {
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+.primaryClor {
+  color: $primary !important;
+}
+.serviceCard {
+  background-color: $heaven;
+  text-align: center;
+  padding: 2rem;
+  padding-top: 4rem;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+  .expIcon {
+    position: absolute;
+    top: -45px;
+    left: 38%;
+    right: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: $heaven;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    border: 4px solid black;
+  }
+  .expIcon2 {
+    border: 4px solid $primary !important;
+  }
+  img {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 1.6;
+  }
+  .primarybtn {
+    @include simpleButton;
+    @include hoverEffect($primary);
+  }
+  .darkbtn {
+    @include simpleButton;
+    @include hoverEffect($ternary);
+  }
+}
+.iconClass {
+  font-size: 55px !important;
+  color: black;
+  transform: rotate(-45deg) !important;
+}
+@media only screen and (min-width: 332px) {
+  .shadows {
+    @include magicShadowSm(-12px);
+  }
+}
+@media only screen and (max-width: 330px) {
+  .serviceCard {
+    padding: 0.5rem;
+    padding-top: 4rem;
+    width: 90%;
+    .expIcon {
+      width: 55px;
+      height: 55px;
+      top: -30px;
+    }
+  }
+}

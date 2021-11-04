@@ -1,0 +1,48 @@
+@import "../../Colors.scss";
+.contactUs {
+  display: flex;
+  overflow-x: hidden;
+
+  .griding {
+    @include gridSystem(2);
+    place-items: center;
+    .contactInfroWrapper {
+      padding: 4rem 0;
+      flex: 1;
+      .pheading {
+        @include sectionHeading;
+      }
+
+      .contactInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        place-items: center;
+        .infoBoxes {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .mapwraper {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+  }
+}
+.stablize {
+  transform: rotate(-45deg);
+}
+@media only screen and (max-width: 785px) {
+  .contactUs {
+    .griding {
+      @include gridSystem(1);
+    }
+    .mapwraper {
+      height: 320px;
+    }
+  }
+}

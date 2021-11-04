@@ -1,0 +1,85 @@
+@import "../../Colors.scss";
+.shadow {
+  z-index: 1;
+  @include magicShadowSm(-2px);
+}
+.filledStar {
+  color: $primary !important;
+}
+.emptyStar {
+  color: $ternary !important;
+}
+.foodCard {
+  background: $heaven;
+  padding: 1.5rem 0;
+  border-radius: 4px;
+  width: 270px;
+  margin-bottom: 10px;
+  .productImg {
+    height: 200px;
+    padding: 0 auto;
+
+    img {
+      width: 90%;
+      height: 100%;
+      padding-bottom: 1rem;
+      object-fit: contain;
+    }
+  }
+  hr {
+    border: 1px solid $light;
+    margin: 1rem 0;
+    opacity: 0.8;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    img {
+      margin-right: 0.25rem;
+    }
+  }
+  .price {
+    text-align: center;
+    color: $danger;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      background: $heaven;
+      color: $secondry;
+      border: 2px solid $primary;
+      font-weight: normal;
+      border-radius: 4px;
+      max-width: 70%;
+      width: 150px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      @include hoverEffect2($primary);
+      .iconCart {
+        background-color: $primary;
+        padding: 0.2rem;
+        font-size: 30px !important;
+        color: $heaven;
+        margin-right: 1rem;
+      }
+      span {
+      }
+    }
+  }
+}

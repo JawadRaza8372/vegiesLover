@@ -1,0 +1,45 @@
+@import "./Colors.scss";
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary;
+}
+body {
+  font-family: "Raleway", sans-serif !important;
+  --webkit-font-smoothing: antialiased;
+}
+.customContain {
+  width: 80%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.iconContact {
+  color: $primary;
+  font-size: 35px !important;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .customContain {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .customContain {
+    width: 95%;
+  }
+}

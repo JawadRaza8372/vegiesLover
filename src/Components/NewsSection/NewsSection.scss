@@ -1,0 +1,41 @@
+@import "../../Colors.scss";
+.newsSection {
+  padding: 4rem 0;
+  position: relative;
+  height: 89.5vh;
+  max-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  .customContain {
+    .pheading {
+      @include sectionHeading;
+    }
+    .blogWrapper {
+      width: 100%;
+      height: 60vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      padding: 1rem 2rem;
+    }
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        @include simpleButton;
+        @include hoverEffect($ternary);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 536px) {
+  .newsSection {
+    .customContain {
+      .blogWrapper {
+        padding: 1rem 1rem;
+      }
+    }
+  }
+}

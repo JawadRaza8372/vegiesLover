@@ -1,0 +1,44 @@
+@import "../../Colors.scss";
+.errorPage {
+  height: 85vh;
+  width: 100%;
+  @include centerFlex;
+  flex-direction: column;
+  .headinError {
+    color: $primary;
+    letter-spacing: 3px;
+    font-size: 50px !important;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $ternary;
+    letter-spacing: 3px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .homeLink {
+    text-decoration: none !important;
+    color: $primary;
+    font-size: 20px;
+    margin: 20px 0px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      width: 0px;
+      height: 4px;
+      transition: all 0.4s ease-in-out;
+      background-color: $primary;
+    }
+    &:hover {
+      font-weight: bold;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+    // @include bottomBorderAnimated($secondry);
+  }
+}

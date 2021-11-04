@@ -1,0 +1,41 @@
+@import "../../Colors.scss";
+.serviceSection {
+  padding: 4rem 0;
+  background: $light;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  .customContain {
+    padding: 0;
+    .pheading {
+      @include sectionHeading;
+    }
+    .CardWrapper {
+      @include gridSystem(3);
+      place-items: center;
+      padding: 4rem 0;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .serviceSection {
+    .customContain {
+      .CardWrapper {
+        @include gridSystem(2);
+        place-items: center;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 725px) {
+  .serviceSection {
+    .customContain {
+      .CardWrapper {
+        @include gridSystem(1);
+        place-items: center;
+      }
+    }
+  }
+}

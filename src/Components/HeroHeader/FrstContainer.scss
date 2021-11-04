@@ -1,0 +1,49 @@
+@import "../../Colors.scss";
+.frstcont {
+  .welcome {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    span {
+      color: $secondry;
+      font-size: 1.5rem;
+      span {
+        color: $primary;
+      }
+    }
+    img {
+      margin-left: 0.5rem;
+    }
+  }
+  h1 {
+    color: $secondry;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    span {
+      color: $primary;
+    }
+  }
+  p {
+    width: 90%;
+    line-height: 1.3rem;
+  }
+  div {
+    button {
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.btn {
+  @include simpleButton;
+}
+.btn1 {
+  @extend .btn;
+  @include hoverEffect($primary);
+}
+.btn2 {
+  @extend .btn;
+  @include hoverEffect($ternary);
+}
